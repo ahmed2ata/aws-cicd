@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/srvo2
+hooks:
+  BeforeInstall:
+    - location: beforeinstall.sh
+      timeout: 30
+  AfterInstall:
+    - location: afterinstall.sh
+      timeout: 30
+  ApplicationStart:
+    - location: start.sh
+      timeout: 30
+  ApplicationStop:
+    - location: stop.sh
+      timeout: 30    
+
